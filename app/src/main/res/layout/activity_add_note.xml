@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_add_note"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="me.chewlett.writeitdown.AddNote">
+
+    <Button
+        android:id="@+id/save_note"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/add_note" />
+
+    <TextView
+        android:id="@+id/title_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/add_note_title"
+        android:textSize="@dimen/font_size"
+        android:layout_margin="@dimen/label_margin"
+        android:layout_below="@id/save_note" />
+    <EditText
+        android:id="@+id/title_edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/subject_edit"
+        android:textSize="@dimen/font_size"
+        android:layout_below="@id/save_note" />
+
+    <TextView
+        android:id="@+id/subject_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/add_note_subject"
+        android:layout_below="@id/title_label"
+        android:textSize="@dimen/font_size"
+        android:layout_margin="@dimen/label_margin"/>
+    <EditText
+        android:id="@+id/subject_edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/subject_label"
+        android:layout_below="@id/title_label"
+        android:textSize="@dimen/font_size" />
+
+    <TextView
+        android:id="@+id/body_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/add_note_body"
+        android:layout_below="@id/subject_label"
+        android:textSize="@dimen/font_size"
+        android:layout_margin="@dimen/label_margin"/>
+
+    <EditText
+        android:id="@+id/body_edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_below="@+id/body_label"
+        android:layout_alignLeft="@+id/body_label"
+        android:layout_alignStart="@+id/body_label"
+        android:textColor="@color/colorText"/>
+
+</RelativeLayout>

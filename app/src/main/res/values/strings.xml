@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Write It Down</string>
+    <string name="add_note_title">Title:</string>
+    <string name="add_note_subject">Subject:</string>
+    <string name="add_note_body">Body:</string>
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="add_note">SAVE NOTE!</string>
+
 </resources>
