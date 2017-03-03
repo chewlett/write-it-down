@@ -5,5 +5,21 @@
     <string name="add_note_body">Body:</string>
     <string name="title_activity_main2">Main2Activity</string>
     <string name="add_note">SAVE NOTE!</string>
+    <string name="menu_settings">Settings</string>
+
+    <string name="sorting_title">Sort By</string>
+    <string name="sorting_summary">Choose how you want to sort your notes list.</string>
+    <string-array name="sorting_keys">
+        <item>Newest-Oldest</item>
+        <item>Oldest-Newest</item>
+        <item>Alphabetical</item>
+    </string-array>
+    <string-array name="sorting_values">
+        <item>date_dsc</item>
+        <item>date_asc</item>
+        <item>title</item>
+    </string-array>
+    <string name="sorting_default">date_dsc</string>
+
 
 </resources>

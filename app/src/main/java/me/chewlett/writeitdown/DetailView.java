@@ -1,15 +1,16 @@
 package me.chewlett.writeitdown;
 
-import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.Cursor;
 import android.support.design.widget.FloatingActionButton;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.TextView;
+
+import java.util.Date;
 
 public class DetailView extends AppCompatActivity {
 
@@ -17,6 +18,7 @@ public class DetailView extends AppCompatActivity {
     private TextView title;
     private TextView subject;
     private TextView body;
+    private TextView dateCreated;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +28,8 @@ public class DetailView extends AppCompatActivity {
         title = (TextView) findViewById(R.id.note_title);
         subject = (TextView) findViewById(R.id.note_subject);
         body = (TextView) findViewById(R.id.note_body);
+        dateCreated = (TextView) findViewById(R.id.date_created);
+
         noteId = getIntent().getLongExtra("rowId", -1);
 
         FloatingActionButton delete = (FloatingActionButton) findViewById(R.id.delete_note_button);
@@ -72,6 +76,7 @@ public class DetailView extends AppCompatActivity {
             title.setText(c.getString(c.getColumnIndexOrThrow(DBAdapter.KEY_TITLE)));
             subject.setText(c.getString(c.getColumnIndexOrThrow(DBAdapter.KEY_SUBJECT)));
             body.setText(c.getString(c.getColumnIndexOrThrow(DBAdapter.KEY_BODY)));
+            dateCreated.setText(new Date(c.getLong(c.getColumnIndexOrThrow(DBAdapter.KEY_DATE))).toString());
         }
         db.close();
     }
